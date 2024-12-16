@@ -8,22 +8,27 @@
 </head>
 <body class="bg-light">
 	<header class="p-2">
-	<h1 class="text-center text-black">¿Cuanta proteina  deberia consumir a dirario dependiendo lo que entreno?</h1>
+	<h1 class="text-center text-black text-decoration-underline">¿Cuanta proteina  deberia consumir a dirario dependiendo lo que entreno?</h1>
 	<h5 class="text-black p-2">La solucion es muy simple, con nuestra calculadora de consumo de proteina podemos identificarlo, los pasos son muy simples colocas tu peso y tu nivel de actividad a la hora de entrenar</h5>	
 </header>
+
+
 	
 	<main class="d-flex flex-column justify-content-center align-items-center">
+		<div class="d-flex justify-content-center align-items-center col-md-8 col-10 mt-2 mb-2">
+	 <h3 class="p-4 bg-primary rounded-2 text-white ">Calculadora de consumo de proteina</h3>
+</div>
 		<div id="app" class="continer d-flex flex-column justify-content-center align-items-center col-10 col-md-6 border border-3 border-primary p-4 rounded-2 mb-4 text-black">
-		<h3 class="col-10">Calculadora de consumo de proteina</h3>
-		<label for="" class="col-md-8 col-10 fw-semibold">Digite su peso en kilogramos</label>
-		<input type="text" v-model="peso" class="col-md-8 col-10 rounded-2 border border-2  border-primary mt-1 mb-1 p-2">
-		<label for="" class="fw-semibold col-md-8 col-10">Seleccione su nivel de actividad o entrenamiento</label>
-		<select name="" id="" v-model="seleccion" class="col-md-8 col-10 rounded-2 border border-2 border-primary p-2 mt-1 mb-1">
+		
+		<label for="" class="col-md-10 col-10 fw-semibold">Digite su peso en kilos</label>
+		<input type="text" v-model="peso" class="col-md-10 col-11 rounded-2 border border-2  mt-1 mb-1 p-2">
+		<label for="" class="fw-semibold col-md-10 col-10">Seleccione su nivel de actividad o entrenamiento</label>
+		<select name="" id="" v-model="seleccion" class="col-md-10 col-11 rounded-2 border border-2 p-2 mt-1 mb-1">
 			<option class="rounded-2 p-2">{{seleccion}}</option>
 			<option class="rounded-2 p-2" value="moderado">Moderado</option>
 			<option class="rounded-2 p-2" value="altaIntensidad">Alta intensidad</option>
 		</select>
-		<button class="btn btn-primary text-white mt-3 col-md-8 col-10" @click="comprobarYCalular();">Calcular</button>
+		<button class="btn btn-primary text-white mt-3 col-md-10 col-11" @click="comprobarYCalular();">Calcular</button>
 
 		<p class="mt-2 text-black">{{result}} gr</p>
 	</div>
